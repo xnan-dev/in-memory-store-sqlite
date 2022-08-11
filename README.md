@@ -15,7 +15,7 @@ To install this library use Composer via:
 ## Usage
 
 Use `InMemoryStoreSqlite::createInstance()` to get a ready-to-use store instance (see example below).
-Sending SPARQL queries can be done via `query` method.
+<!-- Sending [SPARQL](https://www.w3.org/TR/2013/REC-sparql11-overview-20130321/) queries can be done via `query` method. -->
 Your data is stored inside an in-memory SQLite database file.
 **After the script ends all your data inside the store will be gone**.
 
@@ -46,7 +46,7 @@ echo \count($triples); // outputs: 2
 
 ### Example 2 (Consume SPARQL client result)
 
-Use `sweetrdf/sparql-client` and a PSR-7-compatible library (like `guzzlehttp/guzzle`) to query a SPARQL endpoint.
+Use `sweetrdf/sparql-client` and a [PSR-7-compatible library](https://www.php-fig.org/psr/psr-7/) (like `guzzlehttp/guzzle`) to query a SPARQL endpoint.
 For now you have to "transform" SPARQL result set to a quad-list manually.
 Afterwards add quads to store and query it.
 Check test `testSparqlClientCompatibility` in [InMemoryStoreSqliteTest.php](tests/Integration/Store/InMemoryStoreSqliteTest.php) for a working example.
